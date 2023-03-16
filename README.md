@@ -12,7 +12,7 @@ The significance of a CN change is determined using the Z-score. The Z-score cal
 
 Z-score =   (X-µ)/σ 
 
-In the filtering julia script **ICR96.jl** filtering is set as filter([:copynumber,:zscore] => (y,z) -> (y < 1.2 || y > 2.8) && abs(z) >= 2.3,df), i.e. filtering for a Z-score corresponding to a probability of less than approximately 0.01 and a copy number value of either < 1.2 (indicating deletion) or > 2.8 (indicating gain). Depending on the number of samples and quality of mapping other filtering strategies can easily be implemented by changing these variables. The filtering script also generates a table in .csv format, which includes the number of hits within each deviating exon and their mean Z-score
+In the filtering julia script **FilterICR96.jl** filtering is set as filter([:copynumber,:zscore] => (y,z) -> (y < 1.2 || y > 2.8) && abs(z) >= 2.3,df), i.e. filtering for a Z-score corresponding to a probability of less than approximately 0.01 and a copy number value of either < 1.2 (indicating deletion) or > 2.8 (indicating gain). Depending on the number of samples and quality of mapping other filtering strategies can easily be implemented by changing these variables. The filtering script also generates a table in .csv format, which includes the number of hits within each deviating exon and their mean Z-score
 
 For visualization, the included PlotICR96single.r Rscript generates a scatterplot with estimated copy number and z-score for every single position included in the target bed file for any particular sample and gene. 
 
