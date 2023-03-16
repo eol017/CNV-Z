@@ -1,5 +1,5 @@
 #Rscript to generate single gene graph for ICR96 data
-#Usage: Rscript ICR96single.r <id> <gene>
+#Usage: Rscript PlotICR96single.r <id> <gene>
 
 args = commandArgs(trailingOnly=TRUE)
 id = args[1]
