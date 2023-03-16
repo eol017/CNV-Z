@@ -1,5 +1,5 @@
 #Julia script to analyse ICR96 dataset Fx-$id.csv file by filtering
-#Usage julia ICR96.jl 
+#Usage julia FilterICR96.jl 
 
 using CSV, DataFrames, Statistics
 
